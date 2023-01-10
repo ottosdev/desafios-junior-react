@@ -44,6 +44,8 @@ function App() {
     });
   }, []);
 
+
+
   return (
     <>
       <h3>desafio fernandev</h3>
@@ -63,7 +65,11 @@ const Pokemon = ({ data }) => {
     axios.get(data.url).then((response) => setDetails(response.data));
   }, []);
 
-
+  if(details === null) {
+    return (
+      <p>OLA</p>
+    )
+  }
 
   return (
     <div >
